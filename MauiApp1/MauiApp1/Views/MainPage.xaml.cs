@@ -16,7 +16,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+    }
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
@@ -78,6 +78,7 @@ public partial class MainPage : ContentPage
 
         //注意由于Maui默认开启了扩展TitleBar(标题栏融合模式？)所以先要去掉 否则全屏仍然会出现 关闭按钮
         //虽然关闭了标题栏融合模式，但是全屏时仍然会存在一个类似标题栏的东西
+        winuiWindow.Title = "MyTestApp";
         winuiWindow.ExtendsContentIntoTitleBar = false;
         appWindow.SetPresenter(MicrosoftuiWindowing.AppWindowPresenterKind.FullScreen);
 #endif
