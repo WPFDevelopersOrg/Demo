@@ -77,7 +77,7 @@ public partial class MainPage : ContentPage
             return;
 
         //注意由于Maui默认开启了扩展TitleBar(标题栏融合模式？)所以先要去掉 否则全屏仍然会出现 关闭按钮
-        //虽然关闭了标题栏融合模式，但是全屏时仍然会存在一个类似标题栏的东西
+        //虽然关闭了标题栏融合模式，但是全屏时仍然会存在一个类似标题栏的东西，如果需要处理需要进行深度定制（可以查看我的github项目）
         winuiWindow.Title = "MyTestApp";
         winuiWindow.ExtendsContentIntoTitleBar = false;
         appWindow.SetPresenter(MicrosoftuiWindowing.AppWindowPresenterKind.FullScreen);
@@ -148,9 +148,11 @@ public partial class MainPage : ContentPage
 
         var application = MicrosoftuiXaml.Application.Current;
         var res = application.Resources;
+
+        //看到这里你一定会疑惑为什么是这样，如果你有兴趣，可以查阅Winui3的源码
         res["WindowCaptionBackground"] = new MicrosoftuixmlMedia.SolidColorBrush(Microsoftui.Colors.Red);
 
-        //修改标题栏后需要主动刷新才会生效
+        //修改标题栏后需要主动刷新才会生效（否则需要你人为进行一次最小化处理）
         TriggertTitleBarRepaint();
 #endif
     }
