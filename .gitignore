@@ -4,3 +4,5 @@
 *.user
 /MauiApp2/.vs
 /MauiApp2/Binary
+/.vs
+/Binary
