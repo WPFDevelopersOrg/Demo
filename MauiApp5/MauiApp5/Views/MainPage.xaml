@@ -25,7 +25,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Text="Go to login page" Clicked="Button_Clicked"/>
+        <Button Text="Go to login page" Clicked="Button_Clicked" HorizontalOptions="Fill"/>
         <Label x:Name="PART_Label" Grid.Row="1" Text=""/>
 
     </Grid>

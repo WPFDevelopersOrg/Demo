@@ -8,6 +8,7 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();   
         Routing.RegisterRoute("LoginRouter", typeof(LoginPage));
+        Routing.RegisterRoute("TestPage", typeof(TestPage));
     }
 
     protected override bool OnBackButtonPressed()
