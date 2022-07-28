@@ -48,24 +48,6 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 		
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
-	  <PackageReference Include="Microsoft.Maui.Graphics.Controls">
-	    <Version>6.0.101-nightly.294</Version>
-	  </PackageReference>
-	</ItemGroup>
-		
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
-	  <PackageReference Include="Microsoft.Maui.Graphics.Controls">
-	    <Version>6.0.101-nightly.294</Version>
-	  </PackageReference>
-	</ItemGroup>
-		
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">
-	  <PackageReference Include="Microsoft.Maui.Graphics.Controls">
-	    <Version>6.0.101-nightly.294</Version>
-	  </PackageReference>
-	</ItemGroup>
-		
 	<ItemGroup>
 	  <PackageReference Include="SkiaSharp.Views.Maui.Controls" Version="2.88.1-preview.79" />
 	</ItemGroup>

@@ -11,6 +11,8 @@ public static class AppHostExtesions
                  handlers.AddLibraryHandlers();
             });
 
+        AddResourceLibrary();
+
         return builder;
     }
 
@@ -19,5 +21,26 @@ public static class AppHostExtesions
         //handlers.AddTransient(typeof(CustomCheckBox), h => new CustomCheckBoxHandler());
 
         return handlers;
+    }
+
+    internal static bool AddResourceLibrary()
+    {
+#if WINDOWS
+        var application = Microsoft.UI.Xaml.Application.Current;
+        if (application == null)   
+            return false;
+
+        var resource = application.Resources;
+        if (resource == null)
+            return false;
+
+        if (!resource.ContainsKey("MauiDesignControlIn"))
+            resource.MergedDictionaries.Add(new Microsoft.UI.Xaml.ResourceDictionary { Source = new Uri("ms-appx:///MauiDesignControl/Platforms/Windows/Styles/Resources.xbf" )});
+
+        if (!resource.ContainsKey("MauiDesignControlIn"))
+            return false;
+#endif
+
+        return true;
     }
 }
