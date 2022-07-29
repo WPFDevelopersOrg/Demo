@@ -11,6 +11,6 @@ public partial class MainPage : ContentPage
 
     private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
-
+        
     }
 }
