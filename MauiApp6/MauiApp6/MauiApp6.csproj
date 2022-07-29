@@ -50,6 +50,8 @@
 		
 	<ItemGroup>
 	  <None Remove="Resources\Raw\letmesee.json" />
+	  <None Remove="Resources\Raw\Lottie\dashboard.json" />
+	  <None Remove="Resources\Raw\Lottie\flower-animation.json" />
 	</ItemGroup>
 		
 	<ItemGroup>
