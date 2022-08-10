@@ -1,13 +1,10 @@
-﻿using MauiApp2.Views;
-
-namespace MauiApp1;
+﻿namespace MauiApp1;
 
 public partial class AppShell : Shell
 {
 	public AppShell()
 	{
 		InitializeComponent();   
-        Routing.RegisterRoute("LoginRouter", typeof(LoginPage));
     }
 
     protected override bool OnBackButtonPressed()
